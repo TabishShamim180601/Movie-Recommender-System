@@ -2,12 +2,8 @@ import streamlit as st
 import pickle
 import pandas as pd
 import requests
-from dotenv import load_dotenv
-import os
 
-load_dotenv()
-
-api_key = os.getenv("TMDB_API_KEY")
+api_key = st.secrets["TMDB_API_KEY"]
 
 #for getting poster
 def get_poster(movie_id):
